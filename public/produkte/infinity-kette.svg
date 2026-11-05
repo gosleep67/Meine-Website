@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".35" r=".85"><stop offset="0" stop-color="#f7f2ea"/><stop offset="1" stop-color="#ddd2c3"/></radialGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d9b8"/><stop offset=".5" stop-color="#d99e6c"/><stop offset="1" stop-color="#a96a3e"/></linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <path id="arc" d="M90 60 C90 320 310 320 310 60"/>
+    <path id="inf" d="M-34 0 C-34 -20 -9 -20 0 0 C9 20 34 20 34 0 C34 -20 9 -20 0 0 C-9 20 -34 20 -34 0Z"/>
+    <path id="spark" d="M0 -9 Q1 -1 9 0 Q1 1 0 9 Q-1 1 -9 0 Q-1 -1 0 -9Z"/>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <use href="#arc" transform="translate(5 9)" fill="none" stroke="#5a4630" stroke-opacity=".28" stroke-width="5" filter="url(#blur)"/>
+  <ellipse cx="204" cy="292" rx="48" ry="9" fill="#5a4630" fill-opacity=".28" filter="url(#blur)"/>
+  <use href="#arc" fill="none" stroke="url(#rose)" stroke-width="3" stroke-dasharray="5.5 2"/>
+  <g transform="translate(200 262) scale(1.15)">
+    <use href="#inf" fill="none" stroke="url(#rose)" stroke-width="8"/>
+    <use href="#inf" fill="none" stroke="#f4f9fd" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 5.6"/>
+  </g>
+  <g fill="#fff" filter="url(#glow)"><use href="#spark" transform="translate(172 245) scale(.9)"/><use href="#spark" transform="translate(232 278) scale(.8)"/></g>
+  <g fill="#fff"><use href="#spark" transform="translate(172 245) scale(.65)"/><use href="#spark" transform="translate(232 278) scale(.55)"/></g>
+</svg>

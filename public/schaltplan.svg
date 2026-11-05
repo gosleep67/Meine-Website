@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="Space Grotesk, Arial, sans-serif" font-size="13">
+  <rect width="960" height="640" fill="#0b0b10" rx="16" />
+  <text x="30" y="38" fill="#fff" font-size="20" font-weight="700">Peak Link – Prototyp-Schaltplan (Entwurf)</text>
+  <text x="30" y="60" fill="#8d8b94">Mit dem Heltec-Pinplan (V1) abgeglichen. GPIO 45/46 sind Boot-Pins, siehe board.md.</text>
+
+  <!-- Board -->
+  <rect x="340" y="90" width="280" height="400" rx="14" fill="#15151d" stroke="#7b61ff" stroke-width="3" />
+  <text x="480" y="122" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Heltec Wireless Tracker V1.1</text>
+  <text x="480" y="142" text-anchor="middle" fill="#8d8b94">ESP32-S3 · LoRa · GPS · TFT</text>
+  <text x="480" y="162" text-anchor="middle" fill="#8d8b94">intern verdrahtet</text>
+  <g fill="#8d8b94" text-anchor="middle" font-size="12">
+    <text x="480" y="200">LoRa: GPIO 8–14</text>
+    <text x="480" y="220">GPS: GPIO 33, 34</text>
+    <text x="480" y="240">TFT: GPIO 38–42</text><text x="480" y="260">Vext: GPIO 3</text>
+  </g>
+
+  <!-- Left: buttons -->
+  <g stroke="#5ad7ff" stroke-width="2" fill="none">
+    <line x1="340" y1="290" x2="230" y2="290" /><line x1="340" y1="330" x2="230" y2="330" />
+    <line x1="340" y1="370" x2="230" y2="370" /><line x1="340" y1="410" x2="230" y2="410" />
+  </g>
+  <g fill="#fff">
+    <text x="348" y="294">GPIO 4</text><text x="348" y="334">GPIO 5</text><text x="348" y="374">GPIO 6</text><text x="348" y="414">GPIO 7</text>
+  </g>
+  <g fill="#15151d" stroke="#5ad7ff" stroke-width="2">
+    <rect x="130" y="276" width="100" height="28" rx="6" /><rect x="130" y="316" width="100" height="28" rx="6" />
+    <rect x="130" y="356" width="100" height="28" rx="6" /><rect x="130" y="396" width="100" height="28" rx="6" />
+  </g>
+  <g fill="#fff" text-anchor="middle">
+    <text x="180" y="295">Modus ▲</text><text x="180" y="335">Modus ▼</text><text x="180" y="375">Lied ◀</text><text x="180" y="415">Lied ▶</text>
+  </g>
+  <g stroke="#8d8b94" stroke-width="2"><line x1="130" y1="290" x2="100" y2="290" /><line x1="130" y1="330" x2="100" y2="330" /><line x1="130" y1="370" x2="100" y2="370" /><line x1="130" y1="410" x2="100" y2="410" /><line x1="100" y1="290" x2="100" y2="450" /></g>
+  <text x="100" y="468" text-anchor="middle" fill="#8d8b94">GND</text>
+  <text x="30" y="236" fill="#5ad7ff" font-weight="700">4 Taster gegen GND</text>
+  <text x="30" y="254" fill="#8d8b94" font-size="12">interner Pull-up (INPUT_PULLUP)</text>
+
+  <!-- Right: compass -->
+  <g stroke="#ffc371" stroke-width="2" fill="none">
+    <line x1="620" y1="150" x2="730" y2="150" /><line x1="620" y1="180" x2="730" y2="180" /><line x1="620" y1="210" x2="730" y2="210" /><line x1="620" y1="240" x2="730" y2="240" />
+  </g>
+  <g fill="#fff" text-anchor="end"><text x="612" y="154">3V3</text><text x="612" y="184">GND</text><text x="612" y="214">GPIO 17</text><text x="612" y="244">GPIO 37</text></g>
+  <rect x="730" y="120" width="200" height="140" rx="10" fill="#15151d" stroke="#ffc371" stroke-width="2" />
+  <text x="830" y="138" text-anchor="middle" fill="#ffc371" font-weight="700">Kompass QMC5883L</text>
+  <g fill="#fff"><text x="742" y="154">VCC</text><text x="742" y="184">GND</text><text x="742" y="214">SDA</text><text x="742" y="244">SCL</text></g>
+  
+
+  <!-- Right: mic -->
+  <g stroke="#ff5f6d" stroke-width="2" fill="none">
+    <line x1="620" y1="320" x2="730" y2="320" /><line x1="620" y1="345" x2="730" y2="345" /><line x1="620" y1="370" x2="730" y2="370" />
+    <line x1="620" y1="395" x2="730" y2="395" /><line x1="620" y1="420" x2="730" y2="420" />
+  </g>
+  <g fill="#fff" text-anchor="end"><text x="612" y="324">3V3</text><text x="612" y="349">GND</text><text x="612" y="374">GPIO 46</text><text x="612" y="399">GPIO 45</text><text x="612" y="424">GPIO 18</text></g>
+  <rect x="730" y="288" width="200" height="152" rx="10" fill="#15151d" stroke="#ff5f6d" stroke-width="2" />
+  <text x="830" y="306" text-anchor="middle" fill="#ff5f6d" font-weight="700">Mikrofon INMP441 (I2S)</text>
+  <g fill="#fff"><text x="742" y="324">VDD</text><text x="742" y="349">GND, L/R an GND</text><text x="742" y="374">SCK</text><text x="742" y="399">WS</text><text x="742" y="424">SD</text></g>
+
+  <!-- Bottom: power -->
+  <g stroke="#7b61ff" stroke-width="2" fill="none"><line x1="400" y1="490" x2="400" y2="540" /><line x1="560" y1="490" x2="560" y2="540" /></g>
+  <rect x="320" y="540" width="160" height="60" rx="10" fill="#15151d" stroke="#7b61ff" stroke-width="2" />
+  <text x="400" y="565" text-anchor="middle" fill="#fff" font-weight="700">LiPo 3,7 V</text><text x="400" y="584" text-anchor="middle" fill="#8d8b94">am Akku-Anschluss</text>
+  <rect x="500" y="540" width="160" height="60" rx="10" fill="#15151d" stroke="#7b61ff" stroke-width="2" />
+  <text x="580" y="565" text-anchor="middle" fill="#fff" font-weight="700">USB-C</text><text x="580" y="584" text-anchor="middle" fill="#8d8b94">Laden + Flashen</text>
+
+  <text x="30" y="560" fill="#8d8b94" font-size="12">Nicht verwenden: GPIO 19/20 (USB),</text>
+  <text x="30" y="578" fill="#8d8b94" font-size="12">GPIO 35/36 (GPS), 47/48, 26, 15/16 (Quarz)</text>
+  <text x="30" y="596" fill="#8d8b94" font-size="12">Alles mit 3,3 V. Nie 5 V an GPIOs.</text>
+</svg>

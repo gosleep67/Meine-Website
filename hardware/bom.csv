@@ -1,0 +1,12 @@
+Bauteil;Menge;Aufgabe;Preis_ca_EUR;Quelle
+Heltec Wireless Tracker V1.1 868 MHz;1;ESP32-S3 + LoRa + GPS + TFT;25-29;EU-Haendler (OpenELab)
+Mini-OLED SSD1306 0,96 Zoll I2C;1;Display fuer Brille (spaeter);3-5;Schaetzung
+Taster, klein/gross;4;Modus hoch/runter, Lied zurueck/vor;3-6;Schaetzung
+MEMS-Mikrofon INMP441 Breakout;1;Sprache aufnehmen;3-5;Schaetzung
+Kompass QMC5883L Breakout;1;Richtung zum Freund;2-4;Schaetzung
+LiPo-Akku 3,7 V ca. 2000 mAh 2-Pin JST 1.25 mit Schutzschaltung;1;Strom (Jackentasche);15;Electrokit 169 SEK (grob umgerechnet)
+Kabel Silikon 2-adrig 60-80 cm + Magnet-Abreissstecker 2-Pin;1;Akku zur Brille;5-10;BerryBase Magnetstecker 2,90 EUR
+Sicherung PPTC 1-2 A;1;Kurzschlussschutz;1-2;Schaetzung
+Antenne 868 MHz mit SMA/IPEX;1;Reichweite;3-8;Schaetzung
+Steckbrett + Jumperkabel;1;Aufbau;5-8;Schaetzung
+Gehaeuse 3D-Druck PETG;1;Halterung an der Brille;2-5;Schaetzung

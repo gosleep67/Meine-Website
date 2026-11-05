@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".35" r=".85"><stop offset="0" stop-color="#f7f2ea"/><stop offset="1" stop-color="#ddd2c3"/></radialGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d9b8"/><stop offset=".5" stop-color="#d99e6c"/><stop offset="1" stop-color="#a96a3e"/></linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#e3f0fa"/><stop offset="1" stop-color="#b4d2e8"/></linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <path id="band" d="M139.9 175 A85 85 0 1 0 260 175"/>
+    <path id="spark" d="M0 -9 Q1 -1 9 0 Q1 1 0 9 Q-1 1 -9 0 Q-1 -1 0 -9Z"/>
+    <g id="leaf">
+      <path d="M-25 0 Q0 -12 25 0 Q0 12 -25 0Z" fill="url(#stone)" stroke="url(#rose)" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M-25 0 L25 0 M-12 -4.5 L0 0 L-12 4.5 M12 -4.5 L0 0 L12 4.5" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width=".9"/>
+    </g>
+    <g id="flower">
+      <use href="#leaf" transform="translate(0 -13) rotate(90) scale(.7)"/>
+      <use href="#leaf" transform="rotate(72) translate(0 -13) rotate(90) scale(.7)"/>
+      <use href="#leaf" transform="rotate(144) translate(0 -13) rotate(90) scale(.7)"/>
+      <use href="#leaf" transform="rotate(216) translate(0 -13) rotate(90) scale(.7)"/>
+      <use href="#leaf" transform="rotate(288) translate(0 -13) rotate(90) scale(.7)"/>
+      <circle r="4.5" fill="url(#rose)"/>
+    </g>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <ellipse cx="206" cy="332" rx="80" ry="12" fill="#5a4630" fill-opacity=".3" filter="url(#blur)"/>
+  <use href="#band" transform="translate(5 8)" fill="none" stroke="#5a4630" stroke-opacity=".3" stroke-width="7" filter="url(#blur)"/>
+  <use href="#band" fill="none" stroke="url(#rose)" stroke-width="7" stroke-linecap="round"/>
+  <use href="#band" fill="none" stroke="#ffeede" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round" transform="translate(0 -2)"/>
+  <path d="M139.9 175 C150 150 160 135 190 138 M260 175 C250 160 245 160 235 160" fill="none" stroke="url(#rose)" stroke-width="4" stroke-linecap="round"/>
+  <use href="#flower" transform="translate(150 140) scale(1.15) rotate(-12)"/>
+  <use href="#flower" transform="translate(238 130) scale(.9) rotate(8)"/>
+  <use href="#flower" transform="translate(272 158) scale(.55) rotate(30)"/>
+  <use href="#flower" transform="translate(240 175) scale(.55) rotate(-20)"/>
+  <g fill="#fff" filter="url(#glow)"><use href="#spark" transform="translate(120 128) scale(1)"/><use href="#spark" transform="translate(262 118) scale(.8)"/></g>
+  <g fill="#fff"><use href="#spark" transform="translate(120 128) scale(.75)"/><use href="#spark" transform="translate(262 118) scale(.6)"/></g>
+</svg>

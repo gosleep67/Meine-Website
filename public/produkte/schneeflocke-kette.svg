@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".35" r=".85"><stop offset="0" stop-color="#f7f2ea"/><stop offset="1" stop-color="#ddd2c3"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8e3a0"/><stop offset=".5" stop-color="#d9a93f"/><stop offset="1" stop-color="#a7771f"/></linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#e3f0fa"/><stop offset="1" stop-color="#b4d2e8"/></linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <path id="arc" d="M105 30 C105 250 295 250 295 30"/>
+    <path id="spark" d="M0 -9 Q1 -1 9 0 Q1 1 0 9 Q-1 1 -9 0 Q-1 -1 0 -9Z"/>
+    <g id="arm">
+      <path d="M0 0 L0 -44 M0 -23 L-10 -33 M0 -23 L10 -33" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+      <circle cy="-46" r="5.5" fill="url(#stone)" stroke="url(#gold)" stroke-width="1.6"/>
+      <circle cx="-11" cy="-34" r="3.4" fill="url(#stone)" stroke="url(#gold)" stroke-width="1.2"/>
+      <circle cx="11" cy="-34" r="3.4" fill="url(#stone)" stroke="url(#gold)" stroke-width="1.2"/>
+    </g>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <use href="#arc" transform="translate(5 9)" fill="none" stroke="#5a4630" stroke-opacity=".28" stroke-width="5" filter="url(#blur)"/>
+  <ellipse cx="203" cy="320" rx="50" ry="9" fill="#5a4630" fill-opacity=".28" filter="url(#blur)"/>
+  <use href="#arc" fill="none" stroke="url(#gold)" stroke-width="3.4" stroke-dasharray="6 2.2"/>
+  <circle cx="200" cy="205" r="6" fill="none" stroke="url(#gold)" stroke-width="3"/>
+  <g transform="translate(200 270)">
+    <use href="#arm"/><use href="#arm" transform="rotate(60)"/><use href="#arm" transform="rotate(120)"/>
+    <use href="#arm" transform="rotate(180)"/><use href="#arm" transform="rotate(240)"/><use href="#arm" transform="rotate(300)"/>
+    <circle r="9" fill="url(#stone)" stroke="url(#gold)" stroke-width="2.6"/>
+  </g>
+  <g fill="#fff" filter="url(#glow)"><use href="#spark" transform="translate(172 240) scale(.9)"/><use href="#spark" transform="translate(228 300) scale(.8)"/></g>
+  <g fill="#fff"><use href="#spark" transform="translate(172 240) scale(.65)"/><use href="#spark" transform="translate(228 300) scale(.55)"/></g>
+</svg>
