@@ -4,6 +4,8 @@ Stand: 5. November 2026. Preise sind Richtwerte aus `hardware/bom.csv` und den H
 
 ## Muss (Prototyp)
 
+Geplant: Die 2 Boards werden am 6. November 2026 bestellt.
+
 | Erledigt | Was | Menge | Preis ca. | Wo / Hinweis |
 |---|---|---|---|---|
 | [ ] | Heltec Wireless Tracker, HF 868 MHz (inkl. Antenne, Adapterkabel, Akku-Kabel, Stiftleisten) | 1 | 23,50 € | Tinytronics, liefert nach Österreich. Versand im Warenkorb prüfen |

@@ -19,6 +19,10 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 - 3D-Ansicht (`src/viewer3d.js`), Produktdaten (`src/products.js`), Schaltplan (`public/schaltplan.svg`).
 - Build-Ordner `dist/` vorhanden (nicht in Git, steht in `.gitignore`).
 
+## Termine
+
+- **6. November 2026:** 2 × Heltec Wireless Tracker (HF 868 MHz) bestellen (Tinytronics). Vorher bei Tinytronics nachfragen, welche Board-Version (V1.2?) geliefert wird.
+
 ## Offen: Entscheidungen und Klärungen
 
 | Punkt | Was zu tun ist |
