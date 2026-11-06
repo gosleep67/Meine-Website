@@ -1,6 +1,6 @@
 # Akku für die Skibrille (Variante B: Jackentasche)
 
-Alles zum Akku in einer Datei. Stand: 2. November 2026.
+Alles zum Akku in einer Datei. Stand: 6. November 2026.
 
 Grundlage: Datenblatt des Boards (Heltec Wireless Tracker), Produktseite Tinytronics, Händlerseiten und Fachartikel zu Lithium-Akkus bei Kälte. Eigene Rechnungen und Empfehlungen sind als solche gekennzeichnet.
 
@@ -82,8 +82,9 @@ Die Temperaturwerte stammen meist aus Händlerangaben, nicht aus einem Datenblat
 
 | Akku | Entladetemperatur laut Quelle | Eckdaten | Bezug / Lieferung nach Österreich |
 |---|---|---|---|
-| [RS PRO 2 Ah, 674361, JST XHP-2](https://uk.rs-online.com/web/p/speciality-size-rechargeable-batteries/1251266) | −20 bis +60 °C (Suchergebnis zur RS-Seite). Ein Datenblatt der Zelle SR674361P nennt −10 bis 60 °C | 2 Ah, ca. 6,7 × 43 × 61 mm nach Typenbezeichnung | RS Components. Preis und Schutzschaltung nicht geprüft, Lieferung nach Österreich nicht geprüft |
-| **[Electrokit LiPo 3,7 V 2000 mAh, JST-PH](https://www.electrokit.com/en/batteri-lipo-3.7v-2000mah) (gewählt)** | Laden 0–55 °C, **Entladen −20 bis 55 °C** | 2000 mAh, 50 × 40 × 8 mm, 32,9 g, Schutzschaltung (PCM), JST-PH, Kabel 50 mm | Schweden, 169 SEK inkl. 25 % MwSt., 73 Stück lieferbar, Lieferzeit 1–3 Werktage. Laut Seite „Nordics and EU shipping“, **Österreich wird nicht ausdrücklich genannt**: im Warenkorb prüfen |
+| **[RS PRO LiPo 3,7 V 2 Ah, RS-Nr. 125-1266](https://at.rs-online.com/web/p/akku-sondergroessen/1251266) (neu gewählt)** | Laut Datenblatt (Modell SR674361P): Laden 0–45 °C, **Entladen −20 bis 60 °C**, Lagern −20 bis 60 °C | 2000 mAh, 63 × 43,5 × 7 mm, 40 g, **Schutzschaltung (PCM)** laut Datenblatt (Überladung 4,28 V, Tiefentladung 2,90 V, Überstrom ab ca. 4 A), Stecker JST XHP-2 (2,5 mm) an 50 mm Kabel, Ladestrom normal 400 mA, max. 1000 mA, max. Entladen 2000 mA, UN38.3 | **RS Österreich** (at.rs-online.com). 23,96 € netto, **28,75 € inkl. MwSt.**, 151 Stück auf Lager (Stand 6.11.2026). Versand Österreich laut RS-Seite: **14,95 € unter 50 € netto**, 8,95 € unter 100 €, ab 100 € frei, Lieferung am nächsten Werktag. Preise auf der Seite sind netto, RS richtet sich vor allem an Firmen: ob du als Privatperson bestellen kannst, im Warenkorb oder beim Kundenservice (02852/505) prüfen |
+| [Electrokit LiPo 3,7 V 2000 mAh, JST-PH](https://www.electrokit.com/en/batteri-lipo-3.7v-2000mah) (vorher gewählt) | Laden 0–55 °C, **Entladen −20 bis 55 °C** | 2000 mAh, 50 × 40 × 8 mm, 32,9 g, Schutzschaltung (PCM), JST-PH, Kabel 50 mm | Schweden, 169 SEK inkl. 25 % MwSt. Liefert laut dir nur nach Deutschland, **nicht nach Österreich** |
+| [PKNERGY LP103450 2000 mAh (Eckstein)](https://eckstein-shop.de/LiPo-Akku-Lithium-Ion-Polymer-Batterie-37V-2000mAh-mit-JST-PHR-2-Stecker-LP103450-EN) | **nicht angegeben** (Datenblatt ließ sich nicht auslesen) | 2000 mAh, Schutzschaltung, JST-PH 2,0, 35,2 g, 7,95 € | Deutschland. Lieferung nach Österreich nicht geprüft. Nur als Ersatz, wenn das Datenblatt Entladen bis −20 °C bestätigt |
 | 103450 / 103454, 2000 mAh bei eBay und Amazon | −20 bis 60 °C (Händlerangaben, Entladen). Laden 0 bis 45 °C | Schutzschaltung wird bei vielen genannt, Stecker sehr verschieden | Zellen oft von Händlern aus Asien oder UK. Auf Angabe „Entladen −20 °C“ im Angebot achten |
 | [EEMB LP103454LC, Tieftemperatur-Zelle](https://www.eemb.com/products-56) | −40 bis +60 °C | 2000 mAh, **blanke Zelle mit Lötfahnen ohne Stecker und ohne Schutzschaltung** | Brauchst du zusätzlich ein Schutzschaltungs-Modul. Nur mit Lötkenntnissen. Lieferung nicht geprüft |
 | CMB- und Grepow-Tieftemperaturakkus | bis −40 °C | fertige Packs mit JST oder Molex | Hersteller, meist nur auf Anfrage oder in größeren Mengen |
@@ -95,7 +96,7 @@ Die Temperaturwerte stammen meist aus Händlerangaben, nicht aus einem Datenblat
 | EREMIT 654060, 2000 mAh | 6,89 € | 60 × 40 × 6,4 mm, 35 g, JST-PH 2,0, Schutzschaltung, lieferbar in 2–5 Tagen. **Temperatur steht nicht auf der Seite** (Datenblatt liegt als Download auf der Herstellerseite). Versand ins Ausland nur für „vereinbarte Lieferungen an Firmenkunden“, Privatkunden werden an den Partner funkelektronik.at verwiesen |
 | lithium-polymer-akkus.de LP654065, 2000 mAh | Preis nur auf Anfrage | 6,5 × 40 × 66 mm, 40 g, JST PHR-2, Schutzschaltung. Keine Temperaturangabe. Mindestbestellung 5 Stück |
 
-**Ergebnis der Suche:** Einen passenden 2000-mAh-LiPo mit Kälte-Angabe, der sicher lieferbar ist und nach Österreich geht, habe ich heute nicht bestätigt gefunden. Die BerryBase-Akkus passen von Daten und Preis, sind aber gerade nicht auf Lager. Weitere Shops, die du für Österreich prüfen kannst: Reichelt, Conrad, Amazon.de. Dort habe ich nicht gesucht.
+**Ergebnis der Suche (6.11.2026):** Der **RS PRO 2 Ah (125-1266)** hat praktisch dieselben Werte wie der Electrokit-Akku (2000 mAh, eine Zelle, Schutzschaltung, Entladen bis −20 °C) und wird von **RS Österreich** geliefert. Unterschiede: Laden nur bis 45 °C statt 55 °C (zu Hause egal), etwas größer und 7 g schwerer, anderer Stecker (XHP 2,5 mm, egal wegen eigenem Kabel), deutlich teurer (28,75 € plus 14,95 € Versand).
 
 ## 5. Kabel und Abreißstecker
 
@@ -167,7 +168,9 @@ Vor dem Kauf prüfen, ob die Powerbank einen **Modus für kleine Ströme** („A
 
 ## 10. Ergebnis
 
-**Gewählt: Electrokit LiPo 3,7 V 2000 mAh** (Laden 0–55 °C, Entladen −20 bis 55 °C, mit Schutzschaltung, 32,9 g). **Bestellweg:** Electrokit liefert nach Deutschland. Die Bestellung geht an die Adresse deiner Freundin, die den Akku dir nach Österreich schickt oder mitbringt. Lithium-Akkus unterliegen beim Versand Vorschriften: vorher die Regeln des Paketdienstes (Post, DHL, DPD usw.) für Lithium-Akkus prüfen. Am sichersten ist es, den Akku persönlich mitzubringen. Offen: Versandkosten nach Deutschland, Pinzahl und Rastermaß des JST-PH-Steckers (auf der Seite nicht angegeben, vermutlich 2-polig und 2,0 mm), Polung.
+**Gewählt (neu, 6.11.2026): RS PRO LiPo 3,7 V 2 Ah, RS-Nr. 125-1266**, bei [RS Österreich](https://at.rs-online.com/web/p/akku-sondergroessen/1251266). Laden 0–45 °C, Entladen −20 bis 60 °C, Schutzschaltung, 63 × 43,5 × 7 mm, 40 g, 28,75 € inkl. MwSt. plus 14,95 € Versand. Lieferung nach Österreich: **ja** (RS Österreich, Lieferung am nächsten Werktag). Offen: ob RS an Privatpersonen verkauft (beim Bestellen sehen), Polung des XHP-Steckers (Multimeter).
+
+Vorher gewählt war der Electrokit 2000 mAh. Er wurde ersetzt, weil Electrokit nicht nach Österreich liefert.
 
 Achte beim Kauf auf den **Temperaturbereich im Datenblatt**: Der BerryBase LP-785060 ist nur für 0–45 °C angegeben und deshalb für Frost nicht ideal, auch wenn er in der Jacke warm liegt.
 
