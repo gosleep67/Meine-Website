@@ -7,13 +7,14 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <title>Peak Link – Die Skibrille mit Gruppenfunk</title>
   </head>
   <body>
     <div class="loader" id="loader">
       <div class="loader__count"><span id="loader-num">0</span><small>%</small></div>
       <div class="loader__bar"><i id="loader-bar"></i></div>
+      <p class="loader__label">Funkverbindung wird aufgebaut</p>
     </div>
 
     <div class="cursor" id="cursor"><span id="cursor-label"></span></div>
@@ -45,6 +46,7 @@
         <p class="hero__sub" data-hero-fade>Tasten links und rechts für Modi und Musik, ein kleines Display unten rechts für deine Freunde und Sprachnachrichten per Funk, ganz ohne Handynetz.</p>
         <a href="#funktion" class="hero__cta" data-hero-fade data-magnetic>Die Brille ansehen <span>↓</span></a>
 
+        <div class="hero__frame">
         <svg class="hero__art" viewBox="0 0 800 360" role="img" aria-label="Drei Skifahrer am Berg, verbunden durch Funkwellen">
           <defs>
             <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2a4a" /><stop offset="1" stop-color="#0b0b10" /></linearGradient>
@@ -64,6 +66,8 @@
           <rect x="500" y="30" width="270" height="42" rx="21" fill="#0b0b10" opacity=".75" />
           <text x="635" y="57" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="15">Kein Netz? Egal. Die Brille funkt.</text>
         </svg>
+        </div>
+        <p class="hero__hud" data-hero-fade><span><b>LoRa</b> 868 MHz</span><span><b>GPS</b> + Kompass</span><span><b>ESP32-S3</b></span><span><b>Mesh</b> ohne Handynetz</span></p>
       </section>
 
       <div class="marquee" aria-hidden="true">

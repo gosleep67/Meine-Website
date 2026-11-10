@@ -2,8 +2,10 @@ import "./style.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import { initFx } from "./fx.js";
 
 gsap.registerPlugin(ScrollTrigger);
+initFx("peak");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;

@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <title>Lumé – Schmuck</title>
   </head>
   <body class="schmuck">
@@ -22,22 +22,39 @@
 
     <main>
       <section class="sec s-hero" id="top">
-        <div class="hero__blob hero__blob--1"></div>
+        <div class="s-ring" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs>
+              <path id="ring-path" d="M100 100 m-88 0 a88 88 0 1 1 176 0 a88 88 0 1 1 -176 0" />
+              <linearGradient id="ring-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc9c" /><stop offset=".5" stop-color="#e8b44c" /><stop offset="1" stop-color="#c9577a" /></linearGradient>
+            </defs>
+            <g class="s-ring__spin">
+              <text><textPath href="#ring-path" textLength="540">Lumé ✦ Ketten ✦ Armbänder ✦ Ringe ✦ Ohrringe ✦ Österreich ✦</textPath></text>
+            </g>
+            <g class="s-ring__spin s-ring__spin--rev" fill="none" stroke="url(#ring-gold)">
+              <circle cx="100" cy="100" r="72" stroke-width="2.2" />
+              <circle cx="100" cy="100" r="64" stroke-width=".4" stroke-dasharray="1 5" />
+              <path d="M100 18 l7 10 -7 10 -7 -10z" fill="url(#ring-gold)" stroke="none" />
+            </g>
+            <path class="s-ring__gem" d="M100 78 Q102 98 122 100 Q102 102 100 122 Q98 102 78 100 Q98 98 100 78z" fill="url(#ring-gold)" />
+          </svg>
+        </div>
         <h1>Schmuck für<br />jeden <em>Tag</em>.</h1>
         <p>Ketten, Armbänder, Ringe und Ohrringe. Alle Maße und das Gewicht stehen direkt beim Stück. Versand aus Österreich.</p>
+        <a href="#shop" class="s-hero__cta">Alle Stücke ansehen ↓</a>
       </section>
 
       <section class="sec" id="shop">
-        <div class="sec__tag">Sortiment</div>
-        <h2>Alle <em>Stücke</em></h2>
+        <div class="sec__tag" data-io>Sortiment</div>
+        <h2 data-io>Alle <em>Stücke</em></h2>
         <div class="filter" id="filter"></div>
         <div class="prod-grid" id="produkte"></div>
       </section>
 
       <section class="sec" id="info">
-        <div class="sec__tag">Infos</div>
-        <h2>Gut <em>zu wissen</em></h2>
-        <ul class="checks">
+        <div class="sec__tag" data-io>Infos</div>
+        <h2 data-io>Gut <em>zu wissen</em></h2>
+        <ul class="checks" data-io>
           <li><b>Versand aus Österreich.</b> Preise in Euro.</li>
           <li><b>14 Tage Rücktrittsrecht</b> nach Erhalt der Ware.</li>
           <li><b>Maße und Gewicht</b> findest du bei jedem Stück. Bei Fragen schreib mir einfach.</li>

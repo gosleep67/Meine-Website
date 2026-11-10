@@ -1,6 +1,9 @@
 import "./style.css";
 import "./hub.css";
 import { products } from "./products.js";
+import { initFx } from "./fx.js";
+
+initFx("gold");
 
 const eur = (n) => n.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
 const grid = document.getElementById("produkte");
@@ -23,9 +26,10 @@ function render(kat) {
   grid.replaceChildren(
     ...products
       .filter((p) => kat === "Alle" || p.kategorie === kat)
-      .map((p) => {
+      .map((p, i) => {
         const el = document.createElement("article");
         el.className = "prod";
+        el.style.setProperty("--i", i);
         const img = document.createElement("img");
         img.src = p.bild;
         img.alt = p.name;
