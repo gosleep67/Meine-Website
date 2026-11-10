@@ -4,6 +4,8 @@ import { resolve } from "node:path";
 
 export default defineConfig({
   plugins: [react()],
+  // Relative Pfade, damit die Seite auch unter gosleep67.github.io/Meine-Website/ funktioniert
+  base: "./",
   build: {
     rollupOptions: {
       input: {

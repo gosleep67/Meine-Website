@@ -31,7 +31,8 @@ function render(kat) {
         el.className = "prod";
         el.style.setProperty("--i", i);
         const img = document.createElement("img");
-        img.src = p.bild;
+        // Pfade aus products.js beginnen mit "/", auf GitHub Pages liegt die Seite aber in einem Unterordner
+        img.src = p.bild.replace(/^\//, import.meta.env.BASE_URL);
         img.alt = p.name;
         img.loading = "lazy";
         const body = document.createElement("div");
