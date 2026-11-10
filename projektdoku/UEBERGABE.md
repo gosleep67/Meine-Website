@@ -70,4 +70,4 @@ Der vorher gewählte Electrokit-Akku wurde ersetzt, weil Electrokit nicht nach �
 - `hardware/akku.md` + `.pdf`: alles zum Akku (aktuell, RS PRO)
 - `hardware/bom.csv`: Stückliste
 - `hardware/quellen/`: Datenblatt und Schaltplan des Boards
-- `projektdoku/FORTSCHRITT.md`, `EINKAUFSLISTE.md`: **noch auf altem Stand (Electrokit-Akku)**, bei Gelegenheit aktualisieren
+- `projektdoku/FORTSCHRITT.md`, `EINKAUFSLISTE.md`: auf Stand 10.11.2026 (RS-Akku, Tinytronics-Board)

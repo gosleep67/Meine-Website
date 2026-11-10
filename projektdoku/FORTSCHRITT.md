@@ -16,7 +16,7 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 - Bis dahin: Akkus mit Stecker bei Zimmertemperatur auf nicht brennbarer Unterlage lagern.
 - **Akku-Konzept:** Akku in der Jacken-Innentasche, 60–80 cm Silikonkabel, magnetischer Abreißstecker unter dem Kragen, Sicherung (PPTC) am Pluspol.
 - **Pinbelegung** des Boards (V1.1) dokumentiert: frei sind GPIO 4, 5, 6, 7, 17, 37.
-- **Stückliste** (`hardware/bom.csv`) mit Preisschätzung angelegt.
+- **Stückliste** (`hardware/bom.csv`) mit Preisschätzung angelegt, am 10.11. auf den aktuellen Stand gebracht (2 × Board V1.2 von Tinytronics, 2 × RS-Akku, Lötzubehör).
 - Datenblatt und Schaltplan des Boards als PDF abgelegt (`hardware/quellen`).
 
 ### Website (Vite, Three.js, GSAP)
@@ -35,7 +35,6 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 | **Board ist V1.2, Unterlagen nur für V1.1** | Heltec-Support (support@heltec.cn) oder Tinytronics fragen: Schaltplan, Pinplan, Änderungen zu V1.1. Vor dem Anschließen von Taster, Kompass, Mikrofon klären. |
 | Akku-Stecker | JST XH (2,5 mm) passt nicht ins Board. Nach Ankunft der Boards: Polung am Batteriekabel prüfen, dann löten (siehe `UEBERGABE.md`). |
 | Magnetstecker | Nicht wasserdicht im gesteckten Zustand. Unter den Kragen legen, Abreißverhalten testen. |
-| Stückliste aktualisieren | `bom.csv` nennt beim Board noch V1.1 und OpenELab (liefert laut dir nicht nach Österreich). Auf Tinytronics und V1.2 anpassen. Akku ist schon auf RS PRO umgestellt. |
 
 ## Offen: Aufbau und Tests (nach Lieferung)
 
@@ -51,7 +50,7 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 ## Bitte ergänzen (weiß ich nicht)
 
 - Sind die Boards bestellt, und wann kommen sie?
-- Sind Lötkolben, Schrumpfschlauch und ein USB-C-Datenkabel vorhanden?
+- Sind Lötkolben, Schrumpfschlauch und ein USB-C-Datenkabel vorhanden? (Multimeter ist vorhanden.)
 - Stand der Website: was fehlt noch (Texte, Bilder, Veröffentlichung)?
 - Termin oder Ziel (z. B. Skisaison)?
 
