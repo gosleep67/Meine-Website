@@ -1,6 +1,6 @@
 # Einkaufsliste
 
-Stand: 5. November 2026. Preise sind Richtwerte aus `hardware/bom.csv` und den Händlerseiten, Schätzungen sind markiert. Abhaken, wenn bestellt (`[x]`).
+Stand: 10. November 2026. Preise sind Richtwerte aus `hardware/bom.csv` und den Händlerseiten, Schätzungen sind markiert. Abhaken, wenn bestellt (`[x]`).
 
 ## Muss (Prototyp)
 
@@ -10,7 +10,8 @@ Geplant: Die 2 Boards werden am 6. November 2026 bestellt.
 |---|---|---|---|---|
 | [ ] | Heltec Wireless Tracker, HF 868 MHz (inkl. Antenne, Adapterkabel, Akku-Kabel, Stiftleisten) | 1 | 23,50 € | Tinytronics, liefert nach Österreich. Versand im Warenkorb prüfen |
 | [ ] | **Zweites Board** für den Funktest | 1 | 23,50 € | wie oben (Funk braucht zwei Geräte) |
-| [ ] | LiPo 3,7 V 2000 mAh, Schutzschaltung, Entladen bis −20 °C | 1 | ca. 15 € | Electrokit (169 SEK), Lieferung an die Freundin in Deutschland. Lithium-Versandregeln prüfen |
+| [x] | LiPo RS PRO 3,7 V 2 Ah (RS-Nr. 125-1266), Schutzschaltung, Entladen bis −20 °C | 2 | 28,75 € pro Stück + Versand | RS Österreich, liefert nach Österreich. **Angekommen und geprüft (10.11.)** |
+| [ ] | Schrumpfschlauch-Set (rot/schwarz, 1,5–3 mm) | 1 | 3–8 € (Schätzung) | Conrad, Amazon, Baumarkt (OBI, Hornbach, Bauhaus), alle liefern in Österreich. Für die Lötstellen Akku ↔ Batteriekabel |
 | [ ] | USB-C-**Datenkabel** (nur falls nötig) | 1 | ca. 5 € (Schätzung) | Liegt dem Board nicht bei. Erst ein vorhandenes USB-C-Kabel probieren. Wenn der Computer das Board damit nicht erkennt (reines Ladekabel), ein Datenkabel kaufen |
 | [ ] | Magnetischer Abreißstecker, 2-polig, mit Kabel | 1 | 2,90 € | BerryBase Pogo-Pin-Magnetstecker 2 A |
 | [ ] | Silikonkabel 2-adrig, 60–80 cm | 1 | ca. 3 € (Schätzung) | Länge an der Jacke messen |
@@ -21,8 +22,8 @@ Geplant: Die 2 Boards werden am 6. November 2026 bestellt.
 
 | Erledigt | Was | Wofür |
 |---|---|---|
-| [ ] | Multimeter | Akku-Polung prüfen |
-| [ ] | Lötkolben und Lötzinn | Stiftleisten, Akku-Kabel mit Magnetstecker |
+| [x] | Multimeter | Akku-Polung prüfen (vorhanden, Akkus damit gemessen) |
+| [ ] | Lötkolben und Lötzinn | Akku an das Batteriekabel des Boards löten (Stecker passen nicht), später Stiftleisten und Magnetstecker |
 | [ ] | Küchenwaage | Gewicht von Board und Akku |
 | [ ] | Handy mit Bluetooth und Meshtastic-App | koppeln, Funktest |
 | [ ] | Computer mit Chrome oder Edge | Flashen über `flasher.meshtastic.org` |
@@ -46,4 +47,4 @@ Geplant: Die 2 Boards werden am 6. November 2026 bestellt.
 
 ## Summe (grob)
 
-Muss-Teile: etwa 80–90 € mit zwei Boards, ohne Versandkosten, Zoll und Werkzeug. Spätere Teile: etwa 13–25 €.
+Muss-Teile: etwa 120–130 € mit zwei Boards und zwei RS-Akkus (57,50 €), ohne Versandkosten, Zoll und Werkzeug. Spätere Teile: etwa 13–25 €.

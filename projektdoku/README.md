@@ -2,6 +2,7 @@
 
 - [FORTSCHRITT.md](FORTSCHRITT.md): was erledigt ist, was offen ist, nächste Schritte
 - [EINKAUFSLISTE.md](EINKAUFSLISTE.md): was gekauft werden muss, mit Abhakliste
+- [UEBERGABE.md](UEBERGABE.md): Zusammenfassung zum Mitschicken in einen neuen Chat
 
 Technische Details zu Board und Akku: `../hardware/board.md`, `../hardware/akku.md`, Stückliste `../hardware/bom.csv`.
 
