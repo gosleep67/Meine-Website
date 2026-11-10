@@ -24,9 +24,9 @@ Geplant: Die 2 Boards werden am 6. November 2026 bestellt. Stand 10.11.: **Board
 |---|---|---|---|
 | [x] | ✅ | Multimeter | Akku-Polung prüfen (vorhanden, Akkus damit gemessen) |
 | [ ] | ❌ | Lötkolben und Lötzinn | Akku an das Batteriekabel des Boards löten (Stecker passen nicht), später Stiftleisten und Magnetstecker |
-| [ ] | ❌ | Küchenwaage | Gewicht von Board und Akku |
-| [ ] | ❌ | Handy mit Bluetooth und Meshtastic-App | koppeln, Funktest |
-| [ ] | ❌ | Computer mit Chrome oder Edge | Flashen über `flasher.meshtastic.org` |
+| [x] | ✅ | Küchenwaage | Gewicht von Board und Akku |
+| [x] | ✅ | Handy mit Bluetooth und Meshtastic-App | koppeln, Funktest |
+| [x] | ✅ | Computer mit Chrome oder Edge | Flashen über `flasher.meshtastic.org` |
 
 ## Später (nach erfolgreichem Funktest)
 
@@ -42,7 +42,7 @@ Geplant: Die 2 Boards werden am 6. November 2026 bestellt. Stand 10.11.: **Board
 
 | Erhalten | Was | Hinweis |
 |---|---|---|
-| ❌ | Kleine Powerbank (BerryBase Art.-Nr. 53932, 12,09 €) | nur als Ersatz für den ersten Test, braucht „Always on“-Modus |
+| ✅ | Kleine Powerbank (BerryBase Art.-Nr. 53932, 12,09 €) | nur als Ersatz für den ersten Test, braucht „Always on“-Modus |
 | ❌ | Zweiter Akku-Stecker SH1.25 | falls später ein anderer Akku angeschlossen wird |
 
 ## Summe (grob)
