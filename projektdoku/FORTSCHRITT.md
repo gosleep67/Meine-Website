@@ -1,6 +1,6 @@
 # Fortschritt – Skibrille mit Funk, GPS und Display
 
-Stand: 10. November 2026
+Stand: 16. November 2026
 
 Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du schon bestellt, gekauft oder gelötet hast, steht dort nicht. Das ist unten als „bitte ergänzen“ markiert.
 
@@ -26,7 +26,7 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 
 ## Termine
 
-- **6. November 2026:** 2 × Heltec Wireless Tracker (HF 868 MHz) bei Tinytronics bestellen. Stand 10.11.: **Boards noch nicht da** (ob bestellt, bitte ergänzen).
+- **6. November 2026:** 2 × Heltec Wireless Tracker (HF 868 MHz) bei Tinytronics bestellen. **Beide Boards am 16.11. angekommen.** (Händler und genaue Version bitte ergänzen.)
 
 ## Offen: Entscheidungen und Klärungen
 
@@ -49,7 +49,7 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 
 ## Bitte ergänzen (weiß ich nicht)
 
-- Sind die Boards bestellt, und wann kommen sie?
+- Bei welchem Händler wurden die Boards gekauft, und welche Version steht auf der Platine (V1.1, V1.2, V2)?
 - Sind Lötkolben, Schrumpfschlauch und ein USB-C-Datenkabel vorhanden? (Multimeter ist vorhanden.)
 - Stand der Website: was fehlt noch (Texte, Bilder, Veröffentlichung)?
 - Termin oder Ziel (z. B. Skisaison)?

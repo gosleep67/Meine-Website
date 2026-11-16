@@ -1,15 +1,15 @@
 # Einkaufsliste
 
-Stand: 10. November 2026. Preise sind Richtwerte aus `hardware/bom.csv` und den Händlerseiten, Schätzungen sind markiert. „Erledigt“ = bestellt (`[x]`), „Erhalten“ = bereits da (✅) oder noch nicht da (❌).
+Stand: 16. November 2026. Preise sind Richtwerte aus `hardware/bom.csv` und den Händlerseiten, Schätzungen sind markiert. „Erledigt“ = bestellt (`[x]`), „Erhalten“ = bereits da (✅) oder noch nicht da (❌).
 
 ## Muss (Prototyp)
 
-Geplant: Die 2 Boards werden am 6. November 2026 bestellt. Stand 10.11.: **Boards noch nicht da.**
+**Beide Boards sind am 16. November 2026 angekommen.**
 
 | Erledigt | Erhalten | Was | Menge | Preis ca. | Wo / Hinweis |
 |---|---|---|---|---|---|
-| [ ] | ❌ | Heltec Wireless Tracker, HF 868 MHz (inkl. Antenne, Adapterkabel, Akku-Kabel, Stiftleisten) | 1 | 23,50 € | Tinytronics, liefert nach Österreich. Versand im Warenkorb prüfen |
-| [ ] | ❌ | **Zweites Board** für den Funktest | 1 | 23,50 € | wie oben (Funk braucht zwei Geräte) |
+| [x] | ✅ | Heltec Wireless Tracker, HF 868 MHz (inkl. Antenne, Adapterkabel, Akku-Kabel, Stiftleisten) | 1 | 23,50 € | Tinytronics, liefert nach Österreich. Versand im Warenkorb prüfen |
+| [x] | ✅ | **Zweites Board** für den Funktest | 1 | 23,50 € | wie oben (Funk braucht zwei Geräte) |
 | [x] | ✅ | LiPo RS PRO 3,7 V 2 Ah (RS-Nr. 125-1266), Schutzschaltung, Entladen bis −20 °C | 2 | 28,75 € pro Stück + Versand | RS Österreich, liefert nach Österreich. **Angekommen und geprüft (10.11.)** |
 | [ ] | ❌ | Schrumpfschlauch-Set (rot/schwarz, 1,5–3 mm) | 1 | 3–8 € (Schätzung) | Conrad, Amazon, Baumarkt (OBI, Hornbach, Bauhaus), alle liefern in Österreich. Für die Lötstellen Akku ↔ Batteriekabel |
 | [ ] | ❌ | USB-C-**Datenkabel** (nur falls nötig) | 1 | ca. 5 € (Schätzung) | Liegt dem Board nicht bei. Erst ein vorhandenes USB-C-Kabel probieren. Wenn der Computer das Board damit nicht erkennt (reines Ladekabel), ein Datenkabel kaufen |

@@ -1,5 +1,5 @@
 Bauteil;Menge;Aufgabe;Preis_ca_EUR;Quelle;Erhalten
-Heltec Wireless Tracker V1.2 868 MHz (inkl. Antenne, Adapterkabel, Batteriekabel);2;ESP32-S3 + LoRa + GPS + TFT (2 Stueck fuer Funktest);23,50 pro Stueck;Tinytronics (NL, liefert nach AT);❌
+Heltec Wireless Tracker V1.2 868 MHz (inkl. Antenne, Adapterkabel, Batteriekabel);2;ESP32-S3 + LoRa + GPS + TFT (2 Stueck fuer Funktest);23,50 pro Stueck;Tinytronics (NL, liefert nach AT);✅
 Mini-OLED SSD1306 0,96 Zoll I2C;1;Display fuer Brille (spaeter);3-5;Schaetzung;❌
 Taster, klein/gross;4;Modus hoch/runter, Lied zurueck/vor;3-6;Schaetzung;❌
 MEMS-Mikrofon INMP441 Breakout;1;Sprache aufnehmen;3-5;Schaetzung;❌
