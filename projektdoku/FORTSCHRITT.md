@@ -26,7 +26,7 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 
 ## Termine
 
-- **6. November 2026:** 2 × Heltec Wireless Tracker (HF 868 MHz) bei Tinytronics bestellen. **Beide Boards am 16.11. angekommen.** Händler: Tinytronics. (Version auf der Platine bitte ergänzen.)
+- **6. November 2026:** 2 × Heltec Wireless Tracker (HF 868 MHz) bei Tinytronics bestellen. **Beide Boards am 16.11. angekommen.** Händler: Tinytronics. Version laut Platine: **V1.2** (bestätigt 16.11.).
 
 ## Offen: Entscheidungen und Klärungen
 
@@ -49,7 +49,7 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 
 ## Bitte ergänzen (weiß ich nicht)
 
-- Welche Version steht auf der Platine (V1.1, V1.2, V2)? (Händler: Tinytronics)
+- ~~Version~~ erledigt: V1.2 (16.11.)
 - Sind Lötkolben, Schrumpfschlauch und ein USB-C-Datenkabel vorhanden? (Multimeter ist vorhanden.)
 - Stand der Website: was fehlt noch (Texte, Bilder, Veröffentlichung)?
 - Termin oder Ziel (z. B. Skisaison)?
