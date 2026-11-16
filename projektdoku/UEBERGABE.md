@@ -22,7 +22,7 @@ Eine smarte Skibrille mit LoRa-Gruppenfunk, ohne Handynetz:
 
 | Teil | Auswahl | Stand |
 |---|---|---|
-| Board (2 Stück für Funktest) | **Heltec Wireless Tracker V1.2, HF 868 MHz**, Tinytronics (NL, liefert nach AT), ca. 23,50 € | **Beide angekommen (16.11.).** Händler und Version auf der Platine noch eintragen. Antenne, Antennenkabel und Batteriekabel (1,25 mm, Molex PicoBlade-kompatibel) liegen bei, USB-C-Kabel nicht |
+| Board (2 Stück für Funktest) | **Heltec Wireless Tracker V1.2, HF 868 MHz**, Tinytronics (NL, liefert nach AT), ca. 23,50 € | **Beide angekommen (16.11.).** Von Tinytronics. Version auf der Platine noch eintragen. Antenne, Antennenkabel und Batteriekabel (1,25 mm, Molex PicoBlade-kompatibel) liegen bei, USB-C-Kabel nicht |
 | Akku (2 Stück) | **RS PRO LiPo 3,7 V 2 Ah, RS-Nr. 125-1266** (Modell SR674361P), RS Österreich, 28,75 € + Versand | **Angekommen, beide geprüft:** 3,85 V und 3,84 V, Rot = Plus, flach, ok. Herstelldatum 17.07.2026 |
 
 Akku-Daten laut Datenblatt: Schutzschaltung (PCM), Laden 0–45 °C, **Entladen −20 bis 60 °C**, 63 × 43,5 × 7 mm, 40 g, 7,4 Wh, Stecker JST XH 2-polig (2,5 mm) an ca. 5 cm verdrilltem Kabel.
