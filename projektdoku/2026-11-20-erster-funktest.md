@@ -62,6 +62,9 @@ Genau wie Board 1: flashen, Region einstellen, GPS testen. Die zwei Boards heiß
 - Die erste Direktnachricht scheiterte, weil die Boards ihre **Schlüssel** noch nicht ausgetauscht hatten. Nach „Benutzerinfo austauschen“ in der App ging es.
 - Die Nachricht **„Test2“** ging von Board 2 an Board 1. Sie war **verschlüsselt** und kam mit **„Delivered to recipient“** an. Am Display von Board 1 stand: *„Test2 – @Meshtastic 0390“*.
 
+### 9. Eigener privater Kanal 🔒
+Zum Schluss haben beide Boards einen **eigenen, geheimen Kanal** bekommen, mit zufälligem 256-Bit-Schlüssel und **genauer Position**. Den Kanal kennen nur meine Geräte und später die Brillen meiner Freunde. Board 2 hat ihn erstellt, Board 1 hat ihn per QR-Code übernommen. Der Schlüssel bleibt geheim und steht nirgends online.
+
 ---
 
 ## Was ich gelernt habe
