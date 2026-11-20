@@ -19,6 +19,13 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 - **Stückliste** (`hardware/bom.csv`) mit Preisschätzung angelegt, am 10.11. auf den aktuellen Stand gebracht (2 × Board V1.2 von Tinytronics, 2 × RS-Akku, Lötzubehör).
 - Datenblatt und Schaltplan des Boards als PDF abgelegt (`hardware/quellen`).
 
+### Boards angekommen und erste Prüfungen (16.–20. November 2026)
+- **2 × Heltec Wireless Tracker V1.2** von Tinytronics erhalten (Version auf der Platine bestätigt).
+- Lieferumfang: LoRa-Antenne (SMA), Adapterkabel IPEX-1/U.FL auf SMA, Batteriekabel 1,25 mm (rot/schwarz, Enden blank), Stiftleisten, ein dünnes IPEX-Kabel mit blanker Spitze.
+- **Adapterkabel Board 1 war defekt:** Das Koaxkabel war aus der SMA-Buchse gerissen. Selbst angelötet, mit Multimeter geprüft (Mitte–Mitte Durchgang, Schirm–Schirm Durchgang, Mitte–Schirm kein Durchgang), mit Schrumpfschlauch isoliert. Antenne an Buchse „LoRa“ (rechts) gesteckt.
+- **Polung Batteriekabel geprüft (20.11.):** Board per USB-C am Computer, am Batteriekabel gemessen: **+4,14 V, Rot = Plus**. Passt zum Akku (Rot = Plus). USB-C-Kabel funktioniert zum Versorgen (Datenübertragung noch ungeprüft).
+- Hinweis: Der Akku-Stecker (JST XH 2,5 mm) passt wie erwartet nicht in die Board-Buchse, nichts beschädigt.
+
 ### Website (Vite, Three.js, GSAP)
 - Startseite (`index.html`), Brillenseite (`brille.html`), Schmuckseite (`schmuck.html`).
 - 3D-Ansicht (`src/viewer3d.js`), Produktdaten (`src/products.js`), Schaltplan (`public/schaltplan.svg`).

@@ -34,7 +34,7 @@ Der vorher gewählte Electrokit-Akku wurde ersetzt, weil Electrokit nicht nach �
 **Problem:** Der Akku-Stecker (JST XH, 2,5 mm) passt nicht ins Board (1,25 mm).
 
 **Plan (Boards sind seit 16.11. da):**
-1. Batteriekabel aus dem Tinytronics-Paket ins Board stecken und auf der Platine nachsehen, welche **Kabelfarbe auf „+“** liegt (Farben können vertauscht sein!). Foto an Claude schicken.
+1. ~~Polung am Batteriekabel prüfen~~ **Erledigt 20.11.: +4,14 V gemessen, Rot = Plus** (Board per USB, Messung an den Kabelenden).
 2. Weißen Stecker am Akku abzwicken, **einen Draht nach dem anderen**, Enden sofort abkleben.
 3. Am Board-Kabel nur das andere Ende abzwicken (der kleine Stecker bleibt dran). **Am Board selbst nichts abschneiden.**
 4. Abisolieren (ca. 5 mm), verzinnen, **Schrumpfschlauch vorher drüberschieben**, Plus an Plus und Minus an Minus löten, Lötstellen versetzt.
