@@ -146,7 +146,8 @@ export function initViewer(container, listEl, { reduceMotion = false } = {}) {
     const a = (i / 96) * Math.PI * 2;
     strapPts.push(new THREE.Vector3(1.16 * Math.sin(a), 0.1, 1.29 * Math.cos(a)));
   }
-  model.add(ribbon(strapPts, 0.17, std(0x1c1c25, { side: THREE.DoubleSide, roughness: 0.8 })));
+  const strap = ribbon(strapPts, 0.17, std(0x1c1c25, { side: THREE.DoubleSide, roughness: 0.8 }));
+  model.add(strap);
 
   /* Brille: Mittelteil und zwei Flügel */
   const frameMat = std(0x15151d, { roughness: 0.4 });
@@ -177,6 +178,8 @@ export function initViewer(container, listEl, { reduceMotion = false } = {}) {
   }
   const wingL = wing(-1);
   const wingR = wing(1);
+  /* Rahmen und Gläser ohne die Teile, die später an der Brille sitzen */
+  const frame = [center, centerLens, ...wingL.children, ...wingR.children];
 
   /* Tasten links (Modus) und rechts (Lied) */
   const btnLeft = new THREE.Group();
@@ -348,14 +351,49 @@ export function initViewer(container, listEl, { reduceMotion = false } = {}) {
   register("stecker", "Abreißstecker (Magnet)", hex(0xe9f4ff), plug, plug, new THREE.Vector3(0.45, 0.17, 0));
   register("jacke", "Jacke", hex(0x6f8fd0), torso, torso, new THREE.Vector3(-0.9, 0.7, 0.4));
 
+  /* Was zusätzlich zum Bauteil zu sehen ist, damit man erkennt, woran es sitzt */
+  const context = {
+    antenne: [board],
+    display: [...frame, board],
+    "tasten-l": frame,
+    "tasten-r": frame,
+    mikro: frame,
+    kompass: frame,
+    helm: [strap],
+    akku: [torso, collar],
+    kabel: [board, battery, plug, torso, collar],
+    stecker: [cable, torso, collar],
+    jacke: [collar],
+  };
+
+  /* Anfangs ist nur der Kopf mit Hals zu sehen, alles andere erscheint erst per Klick in der Liste */
+  const toggleable = new Set([...Object.values(parts).flatMap((p) => p.objs), ...Object.values(context).flat()]);
+  const empty = document.createElement("p");
+  empty.className = "v3-empty";
+  empty.textContent = "Wähle ein Bauteil aus der Liste";
+  container.append(empty);
+
+  /* Kamera dreht sich zum gewählten Bauteil */
+  let aim = null;
+  const spherical = new THREE.Spherical();
+  const offset = new THREE.Vector3();
+  controls.addEventListener("start", () => (aim = null));
+
   /* Liste zum Hervorheben */
   let activeId = null;
   function setActive(id) {
     activeId = activeId === id ? null : id;
+    toggleable.forEach((o) => (o.visible = false));
+    if (activeId) {
+      [...parts[activeId].objs, ...(context[activeId] || [])].forEach((o) => (o.visible = true));
+      parts[activeId].lab.getWorldPosition(offset);
+      aim = Math.atan2(offset.x - controls.target.x, offset.z - controls.target.z);
+    }
+    controls.autoRotate = !reduceMotion && !activeId;
+    empty.classList.toggle("is-hidden", !!activeId);
     Object.entries(parts).forEach(([k, p]) => {
       p.active = k === activeId;
       p.el.classList.toggle("is-active", p.active);
-      p.el.classList.toggle("is-dim", activeId && !p.active);
     });
     listEl.querySelectorAll("button").forEach((b) => b.classList.toggle("is-active", b.dataset.id === activeId));
   }
@@ -384,6 +422,7 @@ export function initViewer(container, listEl, { reduceMotion = false } = {}) {
     li.append(b);
     listEl.append(li);
   });
+  setActive(null);
 
   /* Rendern nur, wenn sichtbar */
   let visible = true;
@@ -396,13 +435,11 @@ export function initViewer(container, listEl, { reduceMotion = false } = {}) {
     labelRenderer.setSize(width(), height());
   }).observe(container);
 
-  const worldPos = new THREE.Vector3();
   const one = new THREE.Vector3();
   function tick() {
     requestAnimationFrame(tick);
     if (!visible) return;
     const t = performance.now() / 1000;
-    const headDist = camera.position.distanceTo(controls.target);
     Object.values(parts).forEach((p) => {
       const s = p.active ? 1.25 + Math.sin(t * 5) * 0.05 : 1;
       p.objs.forEach((o) => {
@@ -413,11 +450,15 @@ export function initViewer(container, listEl, { reduceMotion = false } = {}) {
         }
       });
     });
-    Object.values(parts).forEach((p) => {
-      p.lab.getWorldPosition(worldPos);
-      const behind = camera.position.distanceTo(worldPos) > headDist + 0.8;
-      p.el.classList.toggle("is-hidden", behind && !p.active);
-    });
+    Object.values(parts).forEach((p) => p.el.classList.toggle("is-hidden", !p.active));
+    if (aim !== null) {
+      offset.copy(camera.position).sub(controls.target);
+      spherical.setFromVector3(offset);
+      const delta = Math.atan2(Math.sin(aim - spherical.theta), Math.cos(aim - spherical.theta));
+      spherical.theta += reduceMotion ? delta : delta * 0.08;
+      if (Math.abs(delta) < 0.002) aim = null;
+      camera.position.copy(controls.target).add(offset.setFromSpherical(spherical));
+    }
     controls.update();
     renderer.render(scene, camera);
     labelRenderer.render(scene, camera);
