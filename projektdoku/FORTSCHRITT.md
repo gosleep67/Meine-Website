@@ -23,8 +23,9 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 - **2 × Heltec Wireless Tracker V1.2** von Tinytronics erhalten (Version auf der Platine bestätigt).
 - Lieferumfang: LoRa-Antenne (SMA), Adapterkabel IPEX-1/U.FL auf SMA, Batteriekabel 1,25 mm (rot/schwarz, Enden blank), Stiftleisten, ein dünnes IPEX-Kabel mit blanker Spitze.
 - **Adapterkabel Board 1 war defekt:** Das Koaxkabel war aus der SMA-Buchse gerissen. Selbst angelötet, mit Multimeter geprüft (Mitte–Mitte Durchgang, Schirm–Schirm Durchgang, Mitte–Schirm kein Durchgang), mit Schrumpfschlauch isoliert. Antenne an Buchse „LoRa“ (rechts) gesteckt.
-- **Polung Batteriekabel geprüft (20.11.):** Board per USB-C am Computer, am Batteriekabel gemessen: **+4,14 V, Rot = Plus**. Passt zum Akku (Rot = Plus). USB-C-Kabel funktioniert zum Versorgen (Datenübertragung noch ungeprüft).
+- **Polung Batteriekabel geprüft (20.11.):** Board per USB-C am Computer, am Batteriekabel gemessen: **+4,14 V, Rot = Plus**. Passt zum Akku (Rot = Plus). USB-C-Kabel funktioniert (auch Daten, siehe unten).
 - Hinweis: Der Akku-Stecker (JST XH 2,5 mm) passt wie erwartet nicht in die Board-Buchse, nichts beschädigt.
+- **Meshtastic geflasht (Board 1, 20.11.):** flasher.meshtastic.org, Gerät „Heltec Wireless Tracker V1.1“ (V1.2 ist dort nicht gelistet), Firmware 2.7.26 Beta, „Löschen und Installieren“, 115200 Baud. Erst „Failed to connect“, mit USER-Taste + RST in den Boot-Modus gebracht, dann 100 %. **USB-C-Kabel kann Daten** (VendorID 0x303a erkannt).
 
 ### Website (Vite, Three.js, GSAP)
 - Startseite (`index.html`), Brillenseite (`brille.html`), Schmuckseite (`schmuck.html`).
