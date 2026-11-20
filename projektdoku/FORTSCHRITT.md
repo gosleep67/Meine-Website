@@ -26,6 +26,7 @@ Ich kenne nur, was im Projektordner steht (Website und `hardware/`). Was du scho
 - **Polung Batteriekabel geprüft (20.11.):** Board per USB-C am Computer, am Batteriekabel gemessen: **+4,14 V, Rot = Plus**. Passt zum Akku (Rot = Plus). USB-C-Kabel funktioniert (auch Daten, siehe unten).
 - Hinweis: Der Akku-Stecker (JST XH 2,5 mm) passt wie erwartet nicht in die Board-Buchse, nichts beschädigt.
 - **Meshtastic geflasht (Board 1, 20.11.):** flasher.meshtastic.org, Gerät „Heltec Wireless Tracker V1.1“ (V1.2 ist dort nicht gelistet), Firmware 2.7.26 Beta, „Löschen und Installieren“, 115200 Baud. Erst „Failed to connect“, mit USER-Taste + RST in den Boot-Modus gebracht, dann 100 %. **USB-C-Kabel kann Daten** (VendorID 0x303a erkannt).
+- **Board 1 eingerichtet (20.11.):** Willkommens-Menü am Board mit USER-Taste bestätigt (kurz = weiter, lang = auswählen), **Region EU_868** direkt am Board gewählt. Mit der Meshtastic-App am Handy per Bluetooth verbunden (PIN vom Display).
 
 ### Website (Vite, Three.js, GSAP)
 - Startseite (`index.html`), Brillenseite (`brille.html`), Schmuckseite (`schmuck.html`).
