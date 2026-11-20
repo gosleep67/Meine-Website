@@ -76,7 +76,7 @@ Genau wie Board 1: flashen, Region einstellen, GPS testen. Die zwei Boards heiß
 
 ## Wie es weitergeht
 
-1. **Privater Kanal** „PeakLink“ mit genauer Position für die Gruppe (heute begonnen)
+1. ~~Privater Kanal~~ ✅ erledigt (siehe Schritt 9)
 2. **Reichweitentest** draußen: Wie weit kommen die Nachrichten?
 3. **Akku anlöten** und Laufzeit sowie Kälteverhalten in der Jackentasche testen
 4. Danach: Kompass, Mikrofon für Sprachnachrichten und Tasten an der Brille
@@ -94,3 +94,4 @@ Genau wie Board 1: flashen, Region einstellen, GPS testen. Die zwei Boards heiß
 | Fremde Knoten empfangen | 24 |
 | Weitester Knoten in der Liste | ca. 39 km |
 | Erste verschlüsselte Nachricht | ✅ angekommen |
+| Privater Gruppenkanal | ✅ eingerichtet |
