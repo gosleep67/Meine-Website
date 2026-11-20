@@ -29,6 +29,7 @@
         <a href="#anwendung" data-magnetic>Anwendung</a>
         <a href="#bauteile" data-magnetic>Bauteile</a>
         <a href="#schaltplan" data-magnetic>Schaltplan</a>
+        <a href="#tagebuch" data-magnetic>Tagebuch</a>
         <a href="#about" data-magnetic>Über mich</a>
       </nav>
     </header>
@@ -372,7 +373,7 @@
         <p class="note" data-reveal>Die Pins sind mit dem Heltec-Pinplan (V1) abgeglichen. Für V1.2 ist das noch nicht bestätigt. GPIO 45 und 46 sind Boot-Pins und nur mit Vorsicht nutzbar. Jedes Teil wird zuerst einzeln getestet.</p>
         <h3 class="sub" data-reveal>Bau-Reihenfolge</h3>
         <ol class="steps">
-          <li data-reveal><span>1</span><div><b>Funk testen</b><p>Zwei Boards mit Meshtastic, Nachricht hin und her.</p></div></li>
+          <li class="is-done" data-reveal><span>1</span><div><b>Funk testen <a class="tag-done" href="#tagebuch">erledigt am 20.11.</a></b><p>Zwei Boards mit Meshtastic, Nachricht hin und her.</p></div></li>
           <li data-reveal><span>2</span><div><b>GPS und Entfernung</b><p>Position austauschen, Meter und Richtung anzeigen.</p></div></li>
           <li data-reveal><span>3</span><div><b>Tasten und Modi</b><p>Vier Taster anschließen, Modi wechseln.</p></div></li>
           <li data-reveal><span>4</span><div><b>Kompass und Mikrofon</b><p>Pfeil drehen, Sprache ans Handy schicken.</p></div></li>
@@ -380,26 +381,87 @@
         </ol>
       </section>
 
+      <!-- TAGEBUCH -->
+      <section class="log" id="tagebuch">
+        <p class="section-tag" data-reveal>06 / Tagebuch</p>
+        <div class="log__head">
+          <h2 class="big" data-split>Der erste Funktest</h2>
+          <p class="log__date" data-reveal><time datetime="2026-11-20">20. November 2026</time><span>Eintrag 01</span></p>
+        </div>
+        <p class="lead lead--s" data-reveal>Zum ersten Mal echte Hardware statt Planung. Beide Boards laufen, haben GPS und funken. Die erste verschlüsselte Nachricht ist von Board zu Board angekommen.</p>
+
+        <div class="log__stats">
+          <div class="log__stat" data-reveal><b>2</b><span>Boards in Betrieb</span></div>
+          <div class="log__stat" data-reveal><b>28</b><span>Satelliten bei Board 1</span></div>
+          <div class="log__stat" data-reveal><b>24</b><span>fremde Knoten empfangen</span></div>
+          <div class="log__stat" data-reveal><b>~39<small>km</small></b><span>weitester Knoten in der Liste</span></div>
+          <div class="log__stat log__stat--ok" data-reveal><b>✓</b><span>erste verschlüsselte Nachricht</span></div>
+        </div>
+
+        <div class="log__hw" data-reveal>
+          <div><span>Board</span><b>2 × Heltec Wireless Tracker V1.2</b><small>ESP32-S3, LoRa SX1262, GPS UC6580, Farbdisplay</small></div>
+          <div><span>Antenne</span><b>868-MHz-Stabantenne</b><small>über Adapterkabel IPEX auf SMA</small></div>
+          <div><span>Strom</span><b>USB-C</b><small>PC oder Powerbank, später LiPo-Akku in der Jacke</small></div>
+          <div><span>Software</span><b>Meshtastic 2.7.26</b><small>EU 868 MHz, Preset „Long Range – Fast“</small></div>
+        </div>
+
+        <h3 class="sub" data-reveal>Was an diesem Tag passiert ist</h3>
+        <ol class="timeline">
+          <li data-reveal><span>01</span><div><b>Antennenkabel repariert</b><p>Beim ersten Board war das dünne Antennenkabel aus der Buchse gerissen. Wieder angelötet, mit dem Multimeter geprüft (Innenleiter verbunden, Abschirmung verbunden, kein Kurzschluss) und mit Schrumpfschlauch gesichert. Es funkt einwandfrei.</p></div></li>
+          <li data-reveal><span>02</span><div><b>Polung für den Akku geprüft</b><p>Der Akku hat einen anderen Stecker als das Board und wird später ans Batteriekabel gelötet. Gemessen am Kabel bei USB-Betrieb: +4,14 V, Rot ist Plus, gleiche Farbe wie am Akku.</p></div></li>
+          <li data-reveal><span>03</span><div><b>Meshtastic geflasht</b><p>Über flasher.meshtastic.org mit der Firmware für den Wireless Tracker V1.1, die auch auf der V1.2 läuft. Bei „Failed to connect“ half der Boot-Modus: USER halten, RST drücken, USER loslassen.</p></div></li>
+          <li data-reveal><span>04</span><div><b>Mit dem Handy verbunden</b><p>Meshtastic-App am iPhone, Bluetooth mit dem PIN vom Display. Region auf EU 868 MHz gestellt, ohne Region funkt das Board nicht.</p></div></li>
+          <li data-reveal><span>05</span><div><b>GPS-Test draußen</b><p>An der Powerbank unter freiem Himmel: nach wenigen Minuten 28 Satelliten bei Board 1 und 11 bei Board 2. Position und Höhe stehen direkt am Display.</p></div></li>
+          <li data-reveal><span>06</span><div><b>Das Mesh in der Umgebung</b><p>Schon das erste Board hat fremde Meshtastic-Geräte empfangen, abends waren es 24 Knoten. Manche direkt, andere über 2 Hops weitergereicht, einer rund 14 km und einer rund 39 km entfernt. Genau dieses Prinzip soll auf der Piste funktionieren.</p></div></li>
+          <li data-reveal><span>07</span><div><b>Board 2 eingerichtet</b><p>Flashen, Region, GPS-Test, genau wie bei Board 1. Die Boards heißen jetzt 1a68 und 0390.</p></div></li>
+          <li class="is-key" data-reveal><span>08</span><div><b>Der erste Funktest</b><p>Board 2 empfängt Board 1 direkt mit „Signal Good“. Nach „Benutzerinfo austauschen“ ging die Nachricht „Test2“ verschlüsselt von Board 2 an Board 1, mit „Delivered to recipient“.</p>
+            <div class="log__screen" aria-label="Display von Board 1 zeigt die Nachricht Test2"><small>Display Board 1</small><b>Test2</b><span>@Meshtastic 0390</span></div></div></li>
+          <li data-reveal><span>09</span><div><b>Eigener privater Kanal</b><p>Beide Boards haben einen geheimen Kanal mit zufälligem 256-Bit-Schlüssel und genauer Position. Board 2 hat ihn erstellt, Board 1 hat ihn per QR-Code übernommen. Der Schlüssel steht nirgends online.</p></div></li>
+        </ol>
+
+        <div class="log__grid">
+          <div>
+            <h3 class="sub" data-reveal>Was ich gelernt habe</h3>
+            <ul class="log__learn">
+              <li data-reveal><b>Antenne immer vor dem Einschalten anstecken.</b> Ohne Antenne kann der Funkchip beim Senden kaputtgehen.</li>
+              <li data-reveal><b>IPEX-Stecker sind fummelig.</b> Genau mittig ansetzen, kräftig und gerade drücken. Sie halten nur etwa 30 Steckvorgänge aus.</li>
+              <li data-reveal><b>ESP32-S3 flashen:</b> Bei „Failed to connect“ braucht es den Boot-Modus.</li>
+              <li data-reveal><b>Öffentlich wird die Position gerundet,</b> auf etwa 3 km. Für „Freunde finden“ braucht es deshalb einen privaten Kanal mit genauer Position.</li>
+              <li data-reveal><b>Direktnachrichten sind Ende-zu-Ende-verschlüsselt.</b> Die Geräte müssen sich dafür erst kennenlernen.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="sub" data-reveal>Wie es weitergeht</h3>
+            <ul class="log__next">
+              <li class="is-done" data-reveal>Privater Kanal</li>
+              <li data-reveal>Reichweitentest draußen: Wie weit kommen die Nachrichten?</li>
+              <li data-reveal>Akku anlöten, Laufzeit und Kälte in der Jackentasche testen</li>
+              <li data-reveal>Kompass, Mikrofon für Sprachnachrichten und Tasten an der Brille</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- ÜBER MICH -->
       <section class="about" id="about">
-        <p class="section-tag" data-reveal>06 / Über mich</p>
+        <p class="section-tag" data-reveal>07 / Über mich</p>
         <h2 class="big" data-split>Wie ich auf die Idee kam</h2>
         <div class="about__grid">
           <div class="about__text" data-reveal>
-            <p>Ich bin Fabis und beschäftige mich mit Elektronik. Ich wollte etwas Eigenes bauen, das echte Leute wirklich brauchen, kein Produkt, das es schon hundertmal gibt.</p>
+            <p>Ich bin Fabio und beschäftige mich mit Elektronik. Ich wollte etwas Eigenes bauen, das echte Leute wirklich brauchen, kein Produkt, das es schon hundertmal gibt.</p>
             <p>Mein Vorbild war der Handy-Karabiner fürs Skifahren: ein simples Teil, das ein konkretes Problem löst, und fast jeder kennt es. Also habe ich mich gefragt: Was geht beim Skifahren sonst noch ständig schief?</p>
             <p>Die Antwort: Man verliert sich in der Gruppe, und genau dort gibt es oft kein Netz. Funk per LoRa löst das, aber ein Zusatzgerät in der Tasche ist umständlich. Die Brille hat man sowieso auf, die Tasten sind am Rand griffbereit und das Display ist immer im Blick.</p>
             <p>Daraus ist dieses Projekt entstanden. Es kann später auch ein Teil meiner Diplomarbeit oder ein kleines Start-up werden.</p>
           </div>
           <aside class="about__card" data-reveal>
             <div class="avatar">F<em>.</em></div>
-            <h4>Fabis</h4>
+            <h4>Fabio</h4>
             <p>Elektronik · Bauen · Ausprobieren</p>
             <a href="mailto:f.sabatini.brg@gmail.com" data-magnetic data-cursor="Mail">f.sabatini.brg@gmail.com</a>
           </aside>
         </div>
         <footer class="footer">
-          <span>© 2026 Fabis · Konzept, kein fertiges Produkt</span>
+          <span>© 2026 Fabio · Konzept, kein fertiges Produkt</span>
           <a href="./" data-magnetic>← Zur Auswahl</a>
           <a href="#hero" data-magnetic>Nach oben ↑</a>
         </footer>

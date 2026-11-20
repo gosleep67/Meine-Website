@@ -336,3 +336,72 @@ p, li, td, .row span, .note, .lead { overflow-wrap: break-word; }
   .wave, .hero__cta span, .hero__eyebrow::before, .loader::before { animation: none; }
   body::before { animation: none; display: none; }
 }
+
+/* Tagebuch */
+.log__head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.5rem 3rem; }
+.log__date { display: flex; flex-direction: column; align-items: flex-end; gap: .35rem; font-family: var(--mono); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.log__date span { color: var(--muted); font-size: .66rem; }
+@media (max-width: 700px) { .log__date { align-items: flex-start; } }
+
+.log__stats { display: flex; flex-wrap: wrap; gap: 1px; margin-top: 3.5rem; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.log__stat { flex: 1 1 160px; padding: 1.5rem 1.25rem 1.35rem; background: rgba(9, 11, 17, .82); }
+.log__stat b { display: block; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1; letter-spacing: -.04em; color: var(--fg); }
+.log__stat b small { font-family: var(--mono); font-size: .3em; letter-spacing: 0; color: var(--accent); margin-left: .25em; }
+.log__stat span { display: block; margin-top: .6rem; font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.log__stat--ok b { color: var(--accent); text-shadow: 0 0 24px color-mix(in srgb, var(--accent) 60%, transparent); }
+
+.log__hw { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem 2rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px dashed var(--line); }
+.log__hw span { display: block; font-family: var(--mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.log__hw b { display: block; margin: .3rem 0 .15rem; font-weight: 500; }
+.log__hw small { color: var(--muted); font-size: .85rem; }
+
+/* Zeitstrahl wie eine Funkstrecke: Knoten auf einer Linie */
+.timeline { position: relative; display: grid; gap: .9rem; padding-left: 3.6rem; }
+.timeline::before {
+  content: ""; position: absolute; left: 1.3rem; top: .5rem; bottom: .5rem; width: 2px;
+  background: repeating-linear-gradient(180deg, var(--accent) 0 6px, transparent 6px 14px); opacity: .55;
+}
+.timeline li { position: relative; padding: 1.25rem 1.4rem; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); transition: border-color .4s; }
+.timeline li:hover { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.timeline li > span {
+  position: absolute; left: -3.6rem; top: 1.15rem; width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--mono); font-size: .78rem; color: var(--accent); background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent); box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.timeline b { font-family: var(--display); font-size: 1.2rem; letter-spacing: -.02em; }
+.timeline p { color: var(--muted); margin-top: .3rem; max-width: 52rem; }
+.timeline li.is-key { border-color: color-mix(in srgb, var(--accent) 60%, transparent); }
+.timeline li.is-key > span { background: var(--accent); color: #05060a; box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 18%, transparent), 0 0 30px var(--accent); }
+.timeline li.is-key > div { display: grid; grid-template-columns: 1fr auto; gap: .3rem 2rem; align-items: center; }
+.timeline li.is-key > div > b, .timeline li.is-key > div > p { grid-column: 1; }
+.timeline li.is-key .log__screen { grid-column: 2; grid-row: 1 / span 2; }
+@media (max-width: 700px) { .timeline li.is-key > div { grid-template-columns: 1fr; } .timeline li.is-key .log__screen { grid-column: 1; grid-row: auto; margin-top: .75rem; } }
+
+/* Nachgebautes Board-Display */
+.log__screen {
+  display: grid; gap: .15rem; min-width: 12rem; padding: .9rem 1.1rem; border-radius: 10px;
+  background: #020305; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: inset 0 0 22px rgba(90, 215, 255, .12), 0 0 30px color-mix(in srgb, var(--accent) 18%, transparent);
+  font-family: var(--mono);
+}
+.log__screen small { font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.log__screen b { font-family: var(--mono); font-size: 1.5rem; color: #fff; text-shadow: 0 0 10px rgba(255, 255, 255, .45); }
+.log__screen span { font-size: .78rem; color: var(--accent); }
+
+.log__grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 0 clamp(2rem, 5vw, 5rem); }
+@media (max-width: 800px) { .log__grid { grid-template-columns: 1fr; } }
+.log__learn li, .log__next li { position: relative; padding: 1rem 0 1rem 2rem; border-top: 1px solid var(--line); color: var(--muted); }
+.log__learn li b { color: var(--fg); font-weight: 500; }
+.log__learn li::before { content: "!"; position: absolute; left: .2rem; top: 1rem; font-family: var(--mono); color: var(--warm); }
+.log__next li::before {
+  content: ""; position: absolute; left: 0; top: 1.25rem; width: 1rem; height: 1rem; border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.log__next li.is-done { color: var(--fg); text-decoration: line-through; text-decoration-color: var(--accent); }
+.log__next li.is-done::before { content: "✓"; display: grid; place-items: center; font-size: .7rem; color: #05060a; background: var(--accent); border-color: var(--accent); }
+
+/* Erledigt-Markierung in der Bau-Reihenfolge */
+.steps li.is-done { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+.steps li.is-done > span { background: var(--accent); color: #05060a; }
+.tag-done { display: inline-block; margin-left: .6rem; padding: .2rem .55rem; border-radius: 999px; vertical-align: middle; font-family: var(--mono); font-size: .62rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent); }
+.tag-done:hover { background: var(--accent); color: #05060a; }
